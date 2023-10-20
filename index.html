@@ -12,14 +12,15 @@
 
 </head>
 
-<body class="relative min-h-screen container max-w-[1440px] mx-auto bg-[var(--off-white)]">
+<body style="border: 2px dotted red; box-sizing: border-box;"
+  class="relative min-h-screen container max-w-[1110px] mx-auto bg-[var(--off-white)] font-['Inter'] text-[15px]">
 
-  <header class="flex justify-between">
+  <header style="border: 2px dashed orangered;" class="mt-[90px] mb-[55px] flex justify-between align-center">
     <div id="logo">
       <img src="assets/images/logo.svg" alt="">
     </div>
-    <nav>
-      <ul class="flex flex-col lg:flex-row">
+    <nav class="flex items-center">
+      <ul class="flex flex-col lg:flex-row gap-[40px]">
         <li>Home</li>
         <li>New</li>
         <li>Popular</li>
@@ -28,7 +29,7 @@
       </ul>
     </nav>
   </header>
-  <main class="grid grid-cols-3">
+  <main class="grid grid-cols-3 gap-[22px]">
     <section id="hero" class="col-span-2 grid grid-cols-2">
       <div id="hero-image" class="col-span-2">
         <picture>
@@ -36,26 +37,26 @@
           <img src="assets/images/image-web-3-mobile.jpg" />
         </picture>
       </div>
-      <div class="col-span-1">
-        <h1>
+      <div style="border: 1px green dotted;" class="col-span-1 py-[42px]">
+        <h1 class="font-extrabold text-6xl">
           The Bright Future of Web 3.0?
         </h1>
       </div>
-      <div class="col-span-1">
-        <p>
+      <div style="border: 1px green dotted;" class="col-span-1 pt-[42px]">
+        <p class="text-md">
           We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
           of
           the
           people.
           But is it really fulfilling its promise?
         </p>
-        <button>
+        <button class="mt-[42px]">
           Read more
         </button>
       </div>
     </section>
-    <aside id="new-posts">
-      <h2>
+    <aside id="new-posts" class="bg-[var(--very-dark-blue)] pt-[36px] px-[25px] text-[var(--off-white)]">
+      <h2 class="text-[var(--soft-orange)] font-bold text-4xl">
         New
       </h2>
       <ul>

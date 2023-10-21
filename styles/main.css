@@ -17,7 +17,7 @@
 }
 
 .menuInactive {
-  display: none;
+  /* display: none; */
   transform: translateX(1000px);
 }
 

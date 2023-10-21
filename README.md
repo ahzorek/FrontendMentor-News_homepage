@@ -55,8 +55,8 @@ Also, lots of Figma slicing:
 
 ```html
   <main class="grid md:grid-cols-3 gap-[30px] mb-10">
-    <section id="hero" class="md:col-span-2 grid md:grid-cols-2 gap-[30px]">
-      <div id="hero-image" class="md:col-span-2">
+    <section class="md:col-span-2 grid md:grid-cols-2 gap-[30px]">
+      <div class="md:col-span-2">
         <picture>
 ```
 

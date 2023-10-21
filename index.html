@@ -30,6 +30,7 @@
       </ul>
     </nav>
     <section id="mobileMenu" class="menuInactive absolute inset-0 bg-black/75 flex justify-end md:hidden">
+      <h2 class="hidden">Mobile Menu</h2>
       <div id="mobileMenuWrapper" class="flex flex-col bg-[var(--off-white)] h-screen w-[65%] shadow-md p-8">
         <div id="closeMobileMenu" class="flex justify-end">
           <button>
@@ -49,12 +50,12 @@
     </section>
   </header>
   <main class="grid md:grid-cols-3 gap-[30px] mb-10">
-    <section id="hero" class="md:col-span-2 grid md:grid-cols-2 gap-[30px]">
-      <div id="hero-image" class="md:col-span-2">
+    <section class="md:col-span-2 grid md:grid-cols-2 gap-[30px]">
+      <div class="md:col-span-2">
         <picture>
-          <source media="(min-width: 768px)" alt="The Bright Future of Web 3.0?"
-            srcset="assets/images/image-web-3-desktop.jpg" />
-          <img class="w-full h-full object-cover rounded-[2px]" src="assets/images/image-web-3-mobile.jpg" />
+          <source media="(min-width: 768px)" srcset="assets/images/image-web-3-desktop.jpg" />
+          <img class="w-full h-full object-cover rounded-[2px]" alt="The Bright Future of Web 3.0?"
+            src="assets/images/image-web-3-mobile.jpg" />
         </picture>
       </div>
       <div class="col-span-1">
@@ -116,7 +117,7 @@
     <section id="cards" class="md:col-span-3 grid md:grid-cols-3 mt-[43px] gap-[30px] md:gap-y-[0] md:gap-x-[30px]">
       <div class="flex gap-x-[24px]">
         <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
-          <img src="/assets/images/image-retro-pcs.jpg" />
+          <img alt="Retro PCs" src="/assets/images/image-retro-pcs.jpg" />
         </div>
         <div class="flex flex-col justify-start">
           <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">01</span>
@@ -132,7 +133,7 @@
       </div>
       <div class="flex gap-x-[24px]">
         <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
-          <img src="/assets/images/image-top-laptops.jpg" />
+          <img alt="Top Laptops" src="/assets/images/image-top-laptops.jpg" />
         </div>
         <div class="flex flex-col justify-start">
           <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">02</span>
@@ -147,7 +148,7 @@
       </div>
       <div class="flex gap-x-[24px]">
         <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
-          <img src="/assets/images/image-gaming-growth.jpg" />
+          <img alt="Gaming Growth" src="/assets/images/image-gaming-growth.jpg" />
         </div>
         <div class="flex flex-col justify-start">
           <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">03</span>

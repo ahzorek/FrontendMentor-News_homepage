@@ -8,92 +8,159 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles/main.css">
 
+  <script src="js/main.js" defer></script>
+
+
   <title>Frontend Mentor | News homepage</title>
 
 </head>
 
-<body style="border: 2px dotted red; box-sizing: border-box;"
-  class="relative min-h-screen container max-w-[1110px] mx-auto bg-[var(--off-white)] font-['Inter'] text-[15px]">
+<body
+  class="relative overflow-x-hidden container max-w-[1110px] mx-auto p-4 lg:p-0 bg-[var(--off-white)] font-['Inter']">
 
-  <header style="border: 2px dashed orangered;" class="mt-[90px] mb-[55px] flex justify-between align-center">
+  <header class="mt-[40px] md:mt-[90px] mb-[55px] flex justify-between align-center">
     <div id="logo">
-      <img src="assets/images/logo.svg" alt="">
+      <img src="assets/images/logo.svg" alt="Logo News homepage">
     </div>
-    <nav class="flex items-center">
-      <ul class="flex flex-col lg:flex-row gap-[40px]">
-        <li>Home</li>
-        <li>New</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Categories</li>
+    <button id="openMobileMenu" class="md:hidden flex flex-col justify-center">
+      <img src="assets/images/icon-menu.svg" alt="Open Mobile Menu">
+    </button>
+    <nav class="hidden md:flex items-center">
+      <ul class="flex flex-col md:flex-row gap-[40px] tracking-tight text-[var(--dark-grayish-blue)]">
+        <li class="hover:text-[var(--soft-red)] cursor-pointer">Home</li>
+        <li class="hover:text-[var(--soft-red)] cursor-pointer">New</li>
+        <li class="hover:text-[var(--soft-red)] cursor-pointer">Popular</li>
+        <li class="hover:text-[var(--soft-red)] cursor-pointer">Trending</li>
+        <li class="hover:text-[var(--soft-red)] cursor-pointer">Categories</li>
       </ul>
     </nav>
+    <section id="mobileMenu" class="menuInactive absolute inset-0 bg-black/75 flex justify-end md:hidden">
+      <div id="mobileMenuWrapper" class="flex flex-col bg-[var(--off-white)] h-screen w-[65%] shadow-md p-8">
+        <div id="closeMobileMenu" class="flex justify-end">
+          <button>
+            <img width="42" height="42" src="assets/images/icon-menu-close.svg" alt="Close Mobile Menu">
+          </button>
+        </div>
+        <nav class="mt-24">
+          <ul class="flex flex-col gap-[20px] tracking-tight text-xl text-[var(--dark-dark-blue)]">
+            <li class="hover:text-[var(--soft-red)] cursor-pointer">Home</li>
+            <li class="hover:text-[var(--soft-red)] cursor-pointer">New</li>
+            <li class="hover:text-[var(--soft-red)] cursor-pointer">Popular</li>
+            <li class="hover:text-[var(--soft-red)] cursor-pointer">Trending</li>
+            <li class="hover:text-[var(--soft-red)] cursor-pointer">Categories</li>
+          </ul>
+        </nav>
+      </div>
+    </section>
   </header>
-  <main class="grid grid-cols-3 gap-[22px]">
-    <section id="hero" class="col-span-2 grid grid-cols-2">
-      <div id="hero-image" class="col-span-2">
+  <main class="grid md:grid-cols-3 gap-[30px] mb-10">
+    <section id="hero" class="md:col-span-2 grid md:grid-cols-2 gap-[30px]">
+      <div id="hero-image" class="md:col-span-2">
         <picture>
-          <source media="(min-width: 768px)" srcset="assets/images/image-web-3-desktop.jpg" />
+          <source media="(min-width: 730px)" srcset="assets/images/image-web-3-desktop.jpg" />
           <img src="assets/images/image-web-3-mobile.jpg" />
         </picture>
       </div>
-      <div style="border: 1px green dotted;" class="col-span-1 py-[42px]">
-        <h1 class="font-extrabold text-6xl">
+      <div class="col-span-1">
+        <h1 class="font-extrabold text-4xl lg:text-[56px] leading-[57.5px] text-[var(--very-dark-blue)]">
           The Bright Future of Web 3.0?
         </h1>
       </div>
-      <div style="border: 1px green dotted;" class="col-span-1 pt-[42px]">
-        <p class="text-md">
+      <div class="col-span-1">
+        <p class="text-[15px] text-[var(--dark-grayish-blue)]">
           We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
           of
           the
           people.
           But is it really fulfilling its promise?
         </p>
-        <button class="mt-[42px]">
+        <button
+          class="mt-[42px] py-[12px] px-[35px] bg-[var(--soft-red)] text-sm uppercase font-bold  tracking-[.20rem] text-[var(--off-white)] hover:bg-[var(--very-dark-blue)] ">
           Read more
         </button>
       </div>
     </section>
-    <aside id="new-posts" class="bg-[var(--very-dark-blue)] pt-[36px] px-[25px] text-[var(--off-white)]">
-      <h2 class="text-[var(--soft-orange)] font-bold text-4xl">
-        New
-      </h2>
+    <aside id="new-posts" class="bg-[var(--very-dark-blue)] pt-[35px] px-[25px] text-[var(--off-white)]">
+      <h2 class="text-[var(--soft-orange)] font-bold text-4xl tracking-wider">New</h2>
       <ul>
-        <li>
-          <h3>Hydrogen VS Electric Cars</h3>
-          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <li class="py-[30px] border-b border-[var(--grayish-blue)]">
+          <h3 class="font-bold text-wide text-xl mb-[15px] cursor-pointer hover:text-[var(--soft-orange)]">Hydrogen VS
+            Electric Cars
+          </h3>
+          <p class="text-sm tracking-wider text-[var(--grayish-blue)]">Will
+            hydrogen-fueled cars ever catch up to EVs?
+          </p>
         </li>
-        <li>
-          <h3>The Downsides of AI Artistry</h3>
-          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        <li class="py-[30px] border-b border-b-[var(--grayish-blue)]">
+          <h3 class="font-bold text-wide text-xl mb-[15px] cursor-pointer hover:text-[var(--soft-orange)]">The Downsides
+            of AI
+            Artistry</h3>
+          <p class="text-sm tracking-wider text-[var(--grayish-blue)]">What are the
+            possible adverse effects of
+            on-demand
+            AI image generation?</p>
         </li>
-        <li>
-          <h3>Is VC Funding Drying Up? </h3>
-          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means. </p>
+        <li class="py-[30px]">
+          <h3 class="font-bold tracking-wide text-xl mb-[15px] cursor-pointer hover:text-[var(--soft-orange)]">Is VC
+            Funding Drying
+            Up? </h3>
+          <p class="text-sm tracking-wider text-[var(--grayish-blue)]">Private funding
+            by VC firms is down 50% YOY. We
+            take a look at what that
+            means. </p>
         </li>
       </ul>
     </aside>
-    <section id="cards" class="col-span-3 grid grid-cols-3">
-      <div>
-        <span>01</span>
-        <h3>Reviving Retro PCs</h3>
-        <p>What happens when old PCs are given modern upgrades?</p>
+    <section id="cards" class="md:col-span-3 grid md:grid-cols-3 mt-[43px] gap-[30px] md:gap-y-[0] md:gap-x-[30px]">
+      <div class="flex gap-x-[24px]">
+        <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
+          <img src="/assets/images/image-retro-pcs.jpg" />
+        </div>
+        <div class="flex flex-col justify-start">
+          <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">01</span>
+          <h3
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] cursor-pointer hover:text-[var(--soft-red)]">
+            Reviving
+            Retro PCs</h3>
+          <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">What happens when old PCs are
+            given
+            modern
+            upgrades?</p>
+        </div>
       </div>
-      <div>
-        <span>02</span>
-        <h3>Top 10 Laptops of 2022</h3>
-        <p>Our best picks for various needs and budgets.</p>
+      <div class="flex gap-x-[24px]">
+        <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
+          <img src="/assets/images/image-top-laptops.jpg" />
+        </div>
+        <div class="flex flex-col justify-start">
+          <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">02</span>
+          <h3
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] cursor-pointer hover:text-[var(--soft-red)]">
+            Top 10
+            Laptops of 2022</h3>
+          <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">Our best picks for various needs
+            and
+            budgets.</p>
+        </div>
       </div>
-      <div>
-        <span>03</span>
-        <h3>The Growth of Gaming</h3>
-        <p>How the pandemic has sparked fresh opportunities.</p>
+      <div class="flex gap-x-[24px]">
+        <div class="max-w-[100px] h-[127px] object-cover rounded-[2px] overflow-hidden">
+          <img src="/assets/images/image-gaming-growth.jpg" />
+        </div>
+        <div class="flex flex-col justify-start">
+          <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">03</span>
+          <h3
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] cursor-pointer hover:text-[var(--soft-red)]">
+            The
+            Growth of Gaming</h3>
+          <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">How the pandemic has sparked fresh
+            opportunities.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="attribution absolute bottom-2 w-full">
+  <footer class="attribution pt-10 w-full">
     <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
     <span>Coded by <a href="https://www.frontendmentor.io/profile/ahzorek">Andre</a>.</span>
   </footer>

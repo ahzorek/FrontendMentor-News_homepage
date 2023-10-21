@@ -7,17 +7,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles/main.css">
-
   <script src="js/main.js" defer></script>
-
-
   <title>Frontend Mentor | News homepage</title>
-
 </head>
 
 <body
   class="relative overflow-x-hidden container max-w-[1110px] mx-auto p-4 lg:p-0 bg-[var(--off-white)] font-['Inter']">
-
   <header class="mt-[40px] md:mt-[90px] mb-[55px] flex justify-between align-center">
     <div id="logo">
       <img src="assets/images/logo.svg" alt="Logo News homepage">
@@ -27,11 +22,11 @@
     </button>
     <nav class="hidden md:flex items-center">
       <ul class="flex flex-col md:flex-row gap-[40px] tracking-tight text-[var(--dark-grayish-blue)]">
-        <li class="hover:text-[var(--soft-red)] cursor-pointer">Home</li>
-        <li class="hover:text-[var(--soft-red)] cursor-pointer">New</li>
-        <li class="hover:text-[var(--soft-red)] cursor-pointer">Popular</li>
-        <li class="hover:text-[var(--soft-red)] cursor-pointer">Trending</li>
-        <li class="hover:text-[var(--soft-red)] cursor-pointer">Categories</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Home</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">New</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Popular</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Trending</li>
+        <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Categories</li>
       </ul>
     </nav>
     <section id="mobileMenu" class="menuInactive absolute inset-0 bg-black/75 flex justify-end md:hidden">
@@ -43,11 +38,11 @@
         </div>
         <nav class="mt-24">
           <ul class="flex flex-col gap-[20px] tracking-tight text-xl text-[var(--dark-dark-blue)]">
-            <li class="hover:text-[var(--soft-red)] cursor-pointer">Home</li>
-            <li class="hover:text-[var(--soft-red)] cursor-pointer">New</li>
-            <li class="hover:text-[var(--soft-red)] cursor-pointer">Popular</li>
-            <li class="hover:text-[var(--soft-red)] cursor-pointer">Trending</li>
-            <li class="hover:text-[var(--soft-red)] cursor-pointer">Categories</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Home</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">New</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Popular</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Trending</li>
+            <li class="hover:text-[var(--soft-red)] transition-all cursor-pointer">Categories</li>
           </ul>
         </nav>
       </div>
@@ -57,8 +52,9 @@
     <section id="hero" class="md:col-span-2 grid md:grid-cols-2 gap-[30px]">
       <div id="hero-image" class="md:col-span-2">
         <picture>
-          <source media="(min-width: 730px)" srcset="assets/images/image-web-3-desktop.jpg" />
-          <img src="assets/images/image-web-3-mobile.jpg" />
+          <source media="(min-width: 768px)" alt="The Bright Future of Web 3.0?"
+            srcset="assets/images/image-web-3-desktop.jpg" />
+          <img class="w-full h-full object-cover rounded-[2px]" src="assets/images/image-web-3-mobile.jpg" />
         </picture>
       </div>
       <div class="col-span-1">
@@ -75,7 +71,7 @@
           But is it really fulfilling its promise?
         </p>
         <button
-          class="mt-[42px] py-[12px] px-[35px] bg-[var(--soft-red)] text-sm uppercase font-bold  tracking-[.20rem] text-[var(--off-white)] hover:bg-[var(--very-dark-blue)] ">
+          class="mt-[42px] py-[12px] px-[35px] bg-[var(--soft-red)] text-sm uppercase font-bold  tracking-[.20rem] text-[var(--off-white)] hover:bg-[var(--very-dark-blue)] transition-all">
           Read more
         </button>
       </div>
@@ -84,27 +80,33 @@
       <h2 class="text-[var(--soft-orange)] font-bold text-4xl tracking-wider">New</h2>
       <ul>
         <li class="py-[30px] border-b border-[var(--grayish-blue)]">
-          <h3 class="font-bold text-wide text-xl mb-[15px] cursor-pointer hover:text-[var(--soft-orange)]">Hydrogen VS
+          <h3
+            class="font-bold text-wide text-xl mb-[15px] cursor-pointer transition-all hover:text-[var(--soft-orange)]">
+            Hydrogen VS
             Electric Cars
           </h3>
-          <p class="text-sm tracking-wider text-[var(--grayish-blue)]">Will
+          <p class="text-sm tracking-wide text-[var(--grayish-blue)]">Will
             hydrogen-fueled cars ever catch up to EVs?
           </p>
         </li>
         <li class="py-[30px] border-b border-b-[var(--grayish-blue)]">
-          <h3 class="font-bold text-wide text-xl mb-[15px] cursor-pointer hover:text-[var(--soft-orange)]">The Downsides
+          <h3
+            class="font-bold text-wide text-xl mb-[15px] cursor-pointer transition-all hover:text-[var(--soft-orange)]">
+            The Downsides
             of AI
             Artistry</h3>
-          <p class="text-sm tracking-wider text-[var(--grayish-blue)]">What are the
+          <p class="text-sm tracking-wide text-[var(--grayish-blue)]">What are the
             possible adverse effects of
             on-demand
             AI image generation?</p>
         </li>
         <li class="py-[30px]">
-          <h3 class="font-bold tracking-wide text-xl mb-[15px] cursor-pointer hover:text-[var(--soft-orange)]">Is VC
+          <h3
+            class="font-bold tracking-wide text-xl mb-[15px] cursor-pointer transition-all hover:text-[var(--soft-orange)]">
+            Is VC
             Funding Drying
             Up? </h3>
-          <p class="text-sm tracking-wider text-[var(--grayish-blue)]">Private funding
+          <p class="text-sm tracking-wide text-[var(--grayish-blue)]">Private funding
             by VC firms is down 50% YOY. We
             take a look at what that
             means. </p>
@@ -119,7 +121,7 @@
         <div class="flex flex-col justify-start">
           <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">01</span>
           <h3
-            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] cursor-pointer hover:text-[var(--soft-red)]">
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] transition-all cursor-pointer hover:text-[var(--soft-red)]">
             Reviving
             Retro PCs</h3>
           <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">What happens when old PCs are
@@ -135,7 +137,7 @@
         <div class="flex flex-col justify-start">
           <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">02</span>
           <h3
-            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] cursor-pointer hover:text-[var(--soft-red)]">
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] transition-all cursor-pointer hover:text-[var(--soft-red)]">
             Top 10
             Laptops of 2022</h3>
           <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">Our best picks for various needs
@@ -150,7 +152,7 @@
         <div class="flex flex-col justify-start">
           <span class="font-bold text-[32px] mt-[-5px] text-[var(--grayish-blue)]">03</span>
           <h3
-            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] cursor-pointer hover:text-[var(--soft-red)]">
+            class="font-bold text-[18px] mb-[10px] text-[var(--very-dark-blue)] transition-all cursor-pointer hover:text-[var(--soft-red)]">
             The
             Growth of Gaming</h3>
           <p class="text-[14px] text-[var(--dark-grayish-blue)] tracking-[0.0325rem]">How the pandemic has sparked fresh
@@ -159,13 +161,10 @@
       </div>
     </section>
   </main>
-
-  <footer class="attribution pt-10 w-full">
+  <footer class="attribution py-10 w-full">
     <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
     <span>Coded by <a href="https://www.frontendmentor.io/profile/ahzorek">Andre</a>.</span>
   </footer>
-  <script>
-  </script>
 </body>
 
 </html>
